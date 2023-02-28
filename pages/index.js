@@ -26,7 +26,6 @@ export default function Home({ allPostsData }) {
           built webpages and emails for Memorial Sloan Kettering Cancer Center
           and The Bowery Mission.
         </p>
-        <Link href="/posts/first-post">Check out my first post</Link>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
