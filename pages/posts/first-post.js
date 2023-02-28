@@ -9,9 +9,15 @@ function FirstPost() {
         <title>First Post</title>
       </Head>
       <h1>First Post</h1>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        hendrerit vitae velit porta accumsan. Suspendisse facilisis eros in
+        lacus lacinia commodo. Praesent aliquet orci et tincidunt lobortis.
+        Curabitur eu arcu congue, dictum dolor quis, ultricies orci. Donec purus
+        odio, commodo non metus suscipit, gravida auctor tellus. Sed imperdiet
+        ligula nunc, et ornare sem faucibus a. Duis dapibus ac purus a
+        condimentum.
+      </p>
     </Layout>
   );
 }
