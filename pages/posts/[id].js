@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Layout from '../../components/Layout';
+import Head from 'next/head';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -21,6 +22,9 @@ export async function getStaticProps({ params }) {
 export default function Post({ postData }) {
   return (
     <Layout>
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
       <h1>
         {postData.title} by {postData.author}
       </h1>
