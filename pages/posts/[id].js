@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Layout from '../../components/Layout';
+import Date from '../../components/Date';
 import Head from 'next/head';
 
 export async function getStaticPaths() {
@@ -29,7 +30,10 @@ export default function Post({ postData }) {
         {postData.title} by {postData.author}
       </h1>
       <p>{postData.id}</p>
-      <p>{postData.date}</p>
+      <p>
+        <Date dateString={postData.date} />
+      </p>
+
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   );
