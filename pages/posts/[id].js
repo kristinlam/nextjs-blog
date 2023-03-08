@@ -1,3 +1,4 @@
+import utilStyles from '../../styles/Utils.module.css';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Layout from '../../components/Layout';
 import Date from '../../components/Date';
@@ -26,15 +27,15 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <h1>
-        {postData.title} by {postData.author}
-      </h1>
-      <p>{postData.id}</p>
-      <p>
-        <Date dateString={postData.date} />
-      </p>
-
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <article>
+        <h1 className={utilStyles.headingXl}>
+          {postData.title} by {postData.author}
+        </h1>
+        <div className={utilStyles.lightText}>
+          <Date dateString={postData.date} />
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </article>
     </Layout>
   );
 }
